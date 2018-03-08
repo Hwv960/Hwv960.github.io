@@ -27,7 +27,7 @@
     <!--Title-->
 
 
-<title>Hello World | 调试代码的大萝卜</title>
+<title>记录如何搭建Hexo+Github步骤 | 调试代码的大萝卜</title>
 
 
     <link rel="alternate" href="/atom.xml" title="调试代码的大萝卜" type="application/atom+xml">
@@ -128,9 +128,9 @@
                     <p id="process"></p>
 <article class="post">
     <div class="post-head">
-        <h1 id="Hello World">
+        <h1 id="记录如何搭建Hexo+Github步骤">
             
-	            Hello World
+	            记录如何搭建Hexo+Github步骤
             
         </h1>
         <div class="post-meta">
@@ -148,7 +148,9 @@
         <i class="fa fa-tags"></i>
         <span class="tags-meta">
             
-                 
+            <a href="/tags/Hexo, 博客搭建">
+               Hexo, 博客搭建
+            </a>
             
         </span>
     </span>
@@ -165,15 +167,13 @@
     </div>
     
     <div class="post-body post-content">
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>网上记录Hexo + GitHub Pages步骤已经很多了，但是还是想记录一下，因为在这过程中遇到了很多的坑，也折腾了一天；在这里记录一下，要是有跟我一样遇到问题的同学可以相互参考一下。</p>
+<h2 id="一、第一步：下载并安装Git"><a href="#一、第一步：下载并安装Git" class="headerlink" title="一、第一步：下载并安装Git"></a>一、第一步：下载并安装Git</h2><p>由于我使用的是Windows电脑，所以这里我只举例Windows电脑的配置方法。</p>
+<h4 id="1、Git的下载地址"><a href="#1、Git的下载地址" class="headerlink" title="1、Git的下载地址"></a>1、<a href="https://git-scm.com/" target="_blank" rel="noopener">Git的下载地址</a></h4><h4 id="2、安装Git"><a href="#2、安装Git" class="headerlink" title="2、安装Git"></a>2、安装Git</h4><p>Git的的安装很简单，只要一切都默认安装就可以了，当然如何你想把Git安装到非系统盘只要在安装的时候进行选择就可以了。</p>
+<h2 id="二、第二步：下载并安装node-js"><a href="#二、第二步：下载并安装node-js" class="headerlink" title="二、第二步：下载并安装node.js"></a>二、第二步：下载并安装node.js</h2><h4 id="1、node-js的下载地址"><a href="#1、node-js的下载地址" class="headerlink" title="1、node.js的下载地址"></a>1、<a href="https://nodejs.org/en/" target="_blank" rel="noopener">node.js的下载地址</a></h4><p>选择一个与电脑系统版本符合的版本就可以了，推荐使用LTS版本，这是长期支持版本，出现问题的几率会小一些。</p>
+<h4 id="2、安装node-js"><a href="#2、安装node-js" class="headerlink" title="2、安装node.js"></a>2、安装node.js</h4><p>node.js的安装也是一路默认下一步就可以了。</p>
+<h4 id="3、修改node-js默认安装软件的目录"><a href="#3、修改node-js默认安装软件的目录" class="headerlink" title="3、修改node.js默认安装软件的目录"></a>3、修改node.js默认安装软件的目录</h4><p>默认情况下node.js安装软件的目录是在系统盘的，有些同学可能和我一样有洁癖，由于我的系统之前是因为系统盘被占满而</p>
+<h2 id="第三步：安装Hexo"><a href="#第三步：安装Hexo" class="headerlink" title="第三步：安装Hexo"></a>第三步：安装Hexo</h2><p>1、利用npm命令就可以进行安装</p>
 
     </div>
 
@@ -191,8 +191,8 @@
 
 <div class="article-nav prev-next-wrap clearfix">
     
-        <a href="/2018/03/08/感谢主题作者/" class="pre-post btn btn-default"><i class="fa fa-angle-left fa-fw"></i>上一篇</a>
     
+        <a href="/2018/03/08/感谢主题作者/" class="next-post btn btn-default">下一篇<i class="fa fa-angle-right fa-fw"></i></a>
     
 </div>
 
