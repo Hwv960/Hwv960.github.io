@@ -27,7 +27,7 @@
     <!--Title-->
 
 
-<title>分类: 记录 | 调试代码的大萝卜</title>
+<title>leetcode题解3.Longest Substring Without Repeating Characters | 调试代码的大萝卜</title>
 
 
     <link rel="alternate" href="/atom.xml" title="调试代码的大萝卜" type="application/atom+xml">
@@ -127,45 +127,102 @@
     <section class="content-wrap">
         <div class="container">
             <div class="row">
-                <main class="col-md-8 main-content ">
-                    <h3> 
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="leetcode题解3.Longest Substring Without Repeating Characters">
+            
+	            leetcode题解3.Longest Substring Without Repeating Characters
+            
+        </h1>
+        <div class="post-meta">
     
-        记录 
     
-</h3>
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <a href="/categories/刷题">
+            刷题
+        </a>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            <a href="/tags/leetcode，刷题，最长子序列">
+               leetcode，刷题，最长子序列
+            </a>
+            
+        </span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">2018/03/13</span>
+    </span>
+</div>
 
-    <article class="post">
-        
-            <div class="post-media">
-                <a href="/2018/03/08/记录如何搭建Hexo+Github步骤/">
-                    <img class="img-ajax" src="/img/loading.gif"  data-src="https://i.loli.net/2018/03/09/5aa1ee4bd9ffa.jpg"  alt="记录如何搭建Hexo+Github步骤"> 
-                </a>
-            </div>
-        
-        <div class="post-content">
-            <div class="post-head home-post-head">
-                <h1 class="post-title"> 
-                    <a href="/2018/03/08/记录如何搭建Hexo+Github步骤/">记录如何搭建Hexo+Github步骤</a>
-                </h1>
-                <div class="post-meta">  &bull;
-                    <time class="post-date" datetime="" title="">
-                        2018年03月08日
-                    </time>
-                </div>
-            </div>
-            <p class="brief">
-                
-                    前言网上记录Hexo + GitHub Pages步骤已经很多了，但是还是想记录一下，因为在这过程中遇到了很多的坑，也折腾了一天；在这里记录一下，要是有跟我一样遇到问题的同学可以相互参考一下。
-一、第一步：下载并安装Git由于我使用的...
-                
-            </p> 
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <h3 id="题目链接地址：-https-leetcode-com-problems-longest-substring-without-repeating-characters-description"><a href="#题目链接地址：-https-leetcode-com-problems-longest-substring-without-repeating-characters-description" class="headerlink" title="题目链接地址： https://leetcode.com/problems/longest-substring-without-repeating-characters/#/description"></a><a href="https://leetcode.com/problems/longest-substring-without-repeating-characters/#/description" target="_blank" rel="noopener">题目链接地址： </a><a href="https://leetcode.com/problems/longest-substring-without-repeating-characters/#/description" target="_blank" rel="noopener">https://leetcode.com/problems/longest-substring-without-repeating-characters/#/description</a></h3><blockquote>
+<h3 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h3></blockquote>
+<blockquote>
+<p>Given a string, find the length of the longest substring without repeating characters.<br>Examples:<br>Given “abcabcbb”, the answer is “abc”, which the length is 3.<br>Given “bbbbb”, the answer is “b”, with the length of 1.<br>Given “pwwkew”, the answer is “wke”, with the length of 3. Note that the answer must be a substring, “pwke” is a subsequence and not a substring.</p>
+</blockquote>
+<h2 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h2><p>题目的大意是说：请从字符串中找出一个最长的不包含重复字符的子字符串，计算该最长子字符串的长度。假设该字符串中只包含‘a’-‘z’的字符。</p>
+<p>打开tag瞅瞅，如下：</p>
+<p>于是我们使用了HashMap和双指针来解决该问题。</p>
+<p>思路：HashMap中不断更新维护每个字符出现的位置。使用count变量进行计数，当统计的最长子字符串被重复字符破坏时，比较count和max的大小，判断是否需要更新max变量。</p>
+<p>总结：不管是哪种情况，每次都需要更新map中的信息，并且需要更新count变量；大哭（切记切记）</p>
+<h3 id="Java实现如下"><a href="#Java实现如下" class="headerlink" title="Java实现如下:"></a><em>Java实现如下:</em></h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">lengthOfLongestSubstring</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">          <span class="keyword">if</span>(s == <span class="keyword">null</span> || s.length() == <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">            Map&lt;Character, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;Character, Integer&gt;();</span><br><span class="line">            <span class="keyword">int</span> max = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">char</span>[] c = s.toCharArray();</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i =<span class="number">0</span>;i&lt;c.length;i++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(!map.containsKey(c[i]))&#123;</span><br><span class="line">                    map.put(c[i], i);</span><br><span class="line">                    count ++;</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    Integer index = map.get(c[i]);</span><br><span class="line">                    <span class="keyword">if</span>(i - index &gt; count)&#123;</span><br><span class="line">                        count ++;</span><br><span class="line">                        map.put(c[i], i);</span><br><span class="line">                        <span class="keyword">continue</span>;</span><br><span class="line">                    &#125;</span><br><span class="line"></span><br><span class="line">                    map.put(c[i], i);</span><br><span class="line">                    <span class="keyword">if</span>(count &gt; max)&#123;</span><br><span class="line">                        max = count;</span><br><span class="line">                    &#125;</span><br><span class="line"></span><br><span class="line">                    count = i - index;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> max &gt; count ? max :count;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    </div>
+
+    <div class="post-footer">   
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">Hwv960</a>
+            
         </div>
-    </article>
- 
+        <div>
+            
+        </div>  
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+        <a href="/2018/03/13/C-string类如何判断字符串为空/" class="pre-post btn btn-default"><i class="fa fa-angle-left fa-fw"></i>上一篇</a>
+    
+    
+        <a href="/2018/03/08/记录如何搭建Hexo+Github步骤/" class="next-post btn btn-default">下一篇<i class="fa fa-angle-right fa-fw"></i></a>
+    
+</div>
 
 
+    <div id="comments">
+        
+	
+<div id="lv-container" data-id="city" data-uid="MTAyMC8zNDY2NS8xMTIwMg==">
+  <script type="text/javascript">
+     (function(d, s) {
+         var j, e = d.getElementsByTagName(s)[0];
+         if (typeof LivereTower === 'function') { return; }
+         j = d.createElement(s);
+         j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+         j.async = true;
+         e.parentNode.insertBefore(j, e);
+     })(document, 'script');
+  </script>
+</div>
 
 
+    </div>
 
 
 
