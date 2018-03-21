@@ -27,7 +27,7 @@
     <!--Title-->
 
 
-<title>标签: 生活随笔，测试 | 调试代码的大萝卜</title>
+<title>leetcode题解20 Valid Parentheses | 调试代码的大萝卜</title>
 
 
     <link rel="alternate" href="/atom.xml" title="调试代码的大萝卜" type="application/atom+xml">
@@ -127,44 +127,91 @@
     <section class="content-wrap">
         <div class="container">
             <div class="row">
-                <main class="col-md-8 main-content ">
-                    <h3> 
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="leetcode题解20 Valid Parentheses">
+            
+	            leetcode题解20 Valid Parentheses
+            
+        </h1>
+        <div class="post-meta">
     
-        生活随笔，测试 
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <a href="/categories/ ">
+             
+        </a>
+    </span>
     
     
-</h3>
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+                 
+            
+        </span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">2018/03/19</span>
+    </span>
+</div>
 
-    <article class="post">
-        
-            <div class="post-media">
-                <a href="/2018/03/08/感谢主题作者/">
-                    <img class="img-ajax" src="/img/loading.gif"  data-src="https://i.loli.net/2018/03/09/5aa1ef1cac355.jpg"  alt="感谢主题作者"> 
-                </a>
-            </div>
-        
-        <div class="post-content">
-            <div class="post-head home-post-head">
-                <h1 class="post-title"> 
-                    <a href="/2018/03/08/感谢主题作者/">感谢主题作者</a>
-                </h1>
-                <div class="post-meta">  &bull;
-                    <time class="post-date" datetime="" title="">
-                        2018年03月08日
-                    </time>
-                </div>
-            </div>
-            <p class="brief">
-                
-                    折腾了一天折腾了一天的博客，终于可以开始进行测试，希望可以坚持在这里进行记录，没想到Hexo + Github Pages的速度还不错，居然比我的服务器的速度还要好，所以决定先试用一下这种方式写博客。
-主题是使用的网上的一位前端的主题...
-                
-            </p> 
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">isValid</span><span class="params">(<span class="built_in">string</span> s)</span> </span>&#123;</span><br><span class="line"><span class="built_in">stack</span> &lt;<span class="keyword">char</span>&gt;stk; </span><br><span class="line">stk.push(s.at(<span class="number">0</span>));</span><br><span class="line"></span><br><span class="line">     <span class="keyword">if</span>(s.length() == <span class="number">1</span>)</span><br><span class="line">         <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">     <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; s.length() ; i++) &#123;</span><br><span class="line">     	<span class="keyword">if</span>(stk.empty()) &#123;</span><br><span class="line">          stk.push(s.at(i));</span><br><span class="line">            <span class="keyword">continue</span>;</span><br><span class="line">        &#125;</span><br><span class="line">         <span class="keyword">if</span>(s.at(i) - stk.top() != <span class="number">0</span> &amp;&amp; s.at(i) - stk.top() &gt; <span class="number">0</span> &amp;&amp; s.at(i) - stk.top() &lt;= <span class="number">2</span>) &#123;</span><br><span class="line">             stk.pop();</span><br><span class="line">         &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">             stk.push(s.at(i));</span><br><span class="line">         &#125;</span><br><span class="line">     &#125;</span><br><span class="line">     <span class="keyword">if</span>(stk.empty())</span><br><span class="line">         <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line"><span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    <div class="post-footer">   
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">Hwv960</a>
+            
         </div>
-    </article>
- 
+        <div>
+            
+        </div>  
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+        <a href="/2018/03/20/Python封装应用程序的最佳项目结构是什么/" class="pre-post btn btn-default"><i class="fa fa-angle-left fa-fw"></i>上一篇</a>
+    
+    
+        <a href="/2018/03/16/leetcode题解14-Longest-Common-Prefix（最长公共前）/" class="next-post btn btn-default">下一篇<i class="fa fa-angle-right fa-fw"></i></a>
+    
+</div>
 
 
+    <div id="comments">
+        
+	
+<div id="lv-container" data-id="city" data-uid="MTAyMC8zNDY2NS8xMTIwMg==">
+  <script type="text/javascript">
+     (function(d, s) {
+         var j, e = d.getElementsByTagName(s)[0];
+         if (typeof LivereTower === 'function') { return; }
+         j = d.createElement(s);
+         j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+         j.async = true;
+         e.parentNode.insertBefore(j, e);
+     })(document, 'script');
+  </script>
+</div>
+
+
+    </div>
 
 
 
